@@ -1,4 +1,4 @@
-\<div align="center">
+
 
 
  _   _      _   ____             _   _            _
@@ -20,7 +20,6 @@
 
 *A Python-based CLI tool for network reconnaissance, security analysis and penetration testing automation.*
 
-\</div>
 
 ---
 
@@ -207,7 +206,6 @@ Atualmente aprofundando conhecimentos em Python, Linux, Nmap, Ethical Hacking e 
 
 ---
 
-\<div align="center">
 
 ### 🛡️ NETSENTINEL
 
