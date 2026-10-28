@@ -213,4 +213,4 @@ Atualmente aprofundando conhecimentos em Python, Linux, Nmap, Ethical Hacking e 
 
 *Developed by PH | 2026*
 
-\</div>
+
