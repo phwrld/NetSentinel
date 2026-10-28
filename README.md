@@ -1,6 +1,13 @@
 \<div align="center">
 
-# 🛡️ NETSENTINEL
+
+ _   _      _   ____             _   _            _
+| \ | | ___| |_/ ___|  ___ _ __ | |_(_)_ __   ___| |
+|  \| |/ _ \ __\___ \ / _ \ '_ \| __| | '_ \ / _ \ |
+| |\  |  __/ |_ ___) |  __/ | | | |_| | | | |  __/ |
+|_| \_|\___|\__|____/ \___|_| |_|\__|_|_| |_|\___|_|
+
+
 
 ### Network Reconnaissance & Security Analysis Tool
 
@@ -36,16 +43,7 @@ O projeto foi criado para aplicar conhecimentos adquiridos em estudos de:
 
 ## 🚀 Funcionalidades
 
-### ✅ Funcionalidades iniciais
-
-- [x] Interface CLI desenvolvida em Python.
-- [x] Banner ASCII personalizado.
-- [x] Identificação de argumentos com `sys.argv`.
-- [x] Comandos `-scan`, `-ftv` e `--help`.
-- [x] Validação de endereços IPv4 e IPv6.
-- [x] Tratamento de entradas inválidas com `try/except`.
-
-### 🔧 Funcionalidades planejadas
+### ✅ Funcionalidades
 
 - [ ] Integração funcional com Nmap.
 - [ ] Varredura TCP automatizada.
@@ -198,69 +196,14 @@ python netsentinel.py --help
 
 ---
 
-## 🗺️ Roadmap de Desenvolvimento
-
-### Fase 1 — CLI Foundation
-
-- [x] Criar a estrutura inicial.
-- [x] Desenvolver banner ASCII.
-- [x] Implementar argumentos de execução.
-- [x] Validar endereços IP.
-
-### Fase 2 — Network Scanning
-
-- [ ] Integrar Nmap.
-- [ ] Implementar TCP scanning.
-- [ ] Desenvolver modo FTV.
-- [ ] Tratar erros de execução.
-
-### Fase 3 — Security Analysis
-
-- [ ] Identificar portas abertas.
-- [ ] Analisar serviços expostos.
-- [ ] Criar alertas de segurança.
-- [ ] Classificar riscos encontrados.
-
-### Fase 4 — Reporting
-
-- [ ] Exportar resultados JSON.
-- [ ] Gerar relatórios HTML.
-- [ ] Registrar histórico de varreduras.
-- [ ] Documentar evidências técnicas.
-
-### Fase 5 — Release
-
-- [ ] Refatorar o código.
-- [ ] Adicionar testes automatizados.
-- [ ] Publicar a versão estável.
-- [ ] Disponibilizar instalação via terminal.
-
----
-
-## 🔐 Aviso Legal
-
-O NetSentinel é um projeto desenvolvido exclusivamente para **fins educacionais, pesquisa e testes de segurança autorizados**.
-
-A utilização da ferramenta deve ocorrer somente em:
-
-- Ambientes de laboratório.
-- Máquinas virtuais próprias.
-- Redes sob administração do usuário.
-- Sistemas com autorização explícita para testes.
-
-O autor não incentiva sua utilização contra sistemas sem autorização.
-
----
-
 ## 👨‍💻 Desenvolvedor
 
 **PH — Developer & Cybersecurity Student**
 
 Estudante de **Desenvolvimento de Sistemas no SENAI**, com foco em Segurança Ofensiva, Redes de Computadores e Penetration Testing.
 
-Atualmente aprofundando conhecimentos em Python, Linux, Nmap, Ethical Hacking e segurança de redes.
+Atualmente aprofundando conhecimentos em Python, Linux, Nmap, Ethical Hacking e segurança de redes. E esse projeto que eu criei tem a função de ajudar meus CTF, estudo, testes de ferramenta. No futuro farei com que o NetSentinel se torne melhor e uma ótima ferramenta para o dia a dia.
 
-**GitHub:** [github.com/phwrld](https://github.com/phwrld)
 
 ---
 
