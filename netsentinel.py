@@ -1,5 +1,7 @@
+
 import sys
 import ipaddress
+import subprocess
 
 print(r"""
  _   _      _   ____             _   _            _
@@ -13,14 +15,16 @@ print(r"""
 
 print("Argumentos recebidos:", sys.argv)
 
+simulacao = True
+
 if len(sys.argv) > 1:
 
-    comando = sys.argv[1]  # Comando
+    comando = sys.argv[1]
 
     if comando == "-ftv":
 
         if len(sys.argv) > 2:
-            alvo = sys.argv[2]  # Alvo
+            alvo = sys.argv[2]
 
             try:
                 ipaddress.ip_address(alvo)
@@ -28,6 +32,40 @@ if len(sys.argv) > 1:
                 print("[+] IP válido!")
                 print("[+] Modo de baixo impacto ativado!")
                 print("[+] Alvo selecionado:", alvo)
+
+                comando_nmap = [
+                    "nmap",
+                    "-sT",
+                    "-T2",
+                    "-p", "21,22,23,80,443,445,3389",
+                    alvo
+                ]
+
+                print("[+] Nmap configurado!")
+                print("[+] Comando:", " ".join(comando_nmap))
+
+                if simulacao:
+                    print("[SIMULAÇÃO] Nenhuma varredura foi executada.")
+                    print("[+] Comando preparado com sucesso!")
+
+                else:
+                    try:
+                        resultado = subprocess.run(
+                            comando_nmap,
+                            capture_output=True,
+                            text=True
+                        )
+
+                        if resultado.returncode == 0:
+                            print("[+] Varredura finalizada!")
+                            print(resultado.stdout)
+
+                        else:
+                            print("[-] Erro durante a varredura!")
+                            print(resultado.stderr)
+
+                    except FileNotFoundError:
+                        print("[-] ERRO: Nmap não encontrado!")
 
             except ValueError:
                 print("[-] ERRO: IP inválido!")
@@ -38,7 +76,7 @@ if len(sys.argv) > 1:
     elif comando == "-scan":
 
         if len(sys.argv) > 2:
-            alvo = sys.argv[2]  # Alvo
+            alvo = sys.argv[2]
 
             try:
                 ipaddress.ip_address(alvo)
@@ -46,6 +84,39 @@ if len(sys.argv) > 1:
                 print("[+] IP válido!")
                 print("[+] Modo de varredura ativado!")
                 print("[+] Alvo selecionado:", alvo)
+
+                comando_nmap = [
+                    "nmap",
+                    "-sT",
+                    "--top-ports", "1000",
+                    alvo
+                ]
+
+                print("[+] Nmap configurado!")
+                print("[+] Comando:", " ".join(comando_nmap))
+
+                if simulacao:
+                    print("[SIMULAÇÃO] Nenhuma varredura foi executada.")
+                    print("[+] Scan preparado com sucesso!")
+
+                else:
+                    try:
+                        resultado = subprocess.run(
+                            comando_nmap,
+                            capture_output=True,
+                            text=True
+                        )
+
+                        if resultado.returncode == 0:
+                            print("[+] Varredura finalizada!")
+                            print(resultado.stdout)
+
+                        else:
+                            print("[-] Erro durante a varredura!")
+                            print(resultado.stderr)
+
+                    except FileNotFoundError:
+                        print("[-] ERRO: Nmap não encontrado!")
 
             except ValueError:
                 print("[-] ERRO: IP inválido!")
@@ -69,4 +140,3 @@ if len(sys.argv) > 1:
 else:
     print("[-] Nenhum comando informado!")
     print("Digite --help para ver os comandos.")
-    
