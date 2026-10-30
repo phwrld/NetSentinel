@@ -14,7 +14,7 @@ console = Console()
 
 # True = simula o comando sem executar o Nmap
 # False = executa a varredura real
-simulacao = True
+simulacao = False
 
 
 # ============================================================
