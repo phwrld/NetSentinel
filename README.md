@@ -92,7 +92,7 @@ chmod +x install.sh
 nst --help
 ```
 
-A instalação utiliza o arquivo `requirements.txt` para configurar as dependências Python e registra o comando `nst` no sistema.
+A instalação utiliza o `apt` para instalar Python 3, Rich e Nmap e registra o comando `nst` no sistema.
 
 ---
 
